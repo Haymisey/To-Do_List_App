@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple to-do list application.">
+  <meta name="keywords" content="to-do, tasks, list">
+  <title>To-Do List</title>
+  <link href="CSS/bootstrap.min.css" rel="stylesheet">
+  <link href="CSS/styles.css" rel="stylesheet">
+  <link href="CSS/add-task.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Add task</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h3 class="text-center">My To-Do List</h3>
+    <div class="input-container d-flex justify-content-center mb-3">
+      <input type="text" id="new-task" class="form-control me-2" placeholder="Add a new task" />
+      <button class="btn btn-primary" id="add-task">Add</button>
+    </div>
+    <ul id="task-list" class="list-group"></ul>
+  </div>
+
+  <a href="todolist.html" class="btn btn-link">Show Lists</a>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/add-task.js"></script>
+  
+
+  
+</body>
+</html>
