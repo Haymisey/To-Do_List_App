@@ -22,6 +22,7 @@ body {
 .menu-bar {
   position: fixed;
   bottom: 0;
+  align-items: center;
   width: 100%;
   background-color: lemonchiffon;
   padding: 10px 0;
