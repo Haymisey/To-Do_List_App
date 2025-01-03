@@ -14,6 +14,9 @@ function renderCalendar() {
   const calendarDays = document.getElementById('calendar-days');
   calendarDays.innerHTML = '';
   
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const taskDates = tasks.map(task => new Date(task.dueDate).getDate());
+  
   for (let i = 0; i < firstDay; i++) {
     const emptyCell = document.createElement('div');
     emptyCell.classList.add('col', 'empty');
@@ -24,6 +27,11 @@ function renderCalendar() {
     const dayCell = document.createElement('div');
     dayCell.classList.add('col');
     dayCell.textContent = day;
+    
+    if (taskDates.includes(day)) {
+      dayCell.style.backgroundColor = "#ffeb3b";
+    }
+    
     calendarDays.appendChild(dayCell);
   }
 }
