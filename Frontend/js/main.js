@@ -10,22 +10,11 @@ function loadTasks() {
     emptyMessage.textContent = "Nothing to do currently";
     taskList.appendChild(emptyMessage);
   } else {
-    tasks.forEach(taskText => {
+    tasks.forEach(({ task, dueDate }, index) => {
       const li = document.createElement("li");
       li.classList.add("list-group-item");
-      li.textContent = taskText;
+      li.textContent = `${index + 1}. ${task} ${dueDate ? `(Due: ${dueDate})` : ""}`;
       taskList.appendChild(li);
     });
   }
-}
-function loadTasks() {
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    const taskList = document.getElementById("task-list");
-
-    tasks.forEach((taskText, index) => {
-        const li = document.createElement("li");
-        li.classList.add("list-group-item");
-        li.textContent = `${index + 1}. ${taskText}`;
-        taskList.appendChild(li);
-    });
 }
